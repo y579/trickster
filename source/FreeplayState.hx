@@ -69,16 +69,7 @@ class FreeplayState extends MusicBeatState
 		bars.setGraphicSize(Std.int(bars.width * 0.65));
 		add(bars);
 
-		if (FlxG.save.data.beatenHard || debug)
-			songs.push(songFour);
-		else
-		{
-			var locked:FlxSprite = new FlxSprite(songFour.trueX, songFour.trueY).loadGraphic(Paths.image('menu/freeplay/Expurgation Locked','clown'), true, 900, 200);
-			locked.animation.add("static", [0, 1, 2, 3], 12, true);
-			locked.animation.play("static");
-			locked.screenCenter(X);
-			add(locked);
-		}
+		
 
 		for (i in songs)
 			{
